@@ -1,0 +1,582 @@
+---
+import Squiggle from './decorative/Squiggle.astro';
+
+const characters = [
+  {
+    name: 'Juan',
+    role: 'Protagonista',
+    badge: 'Lectura & Fútbol',
+    desc: 'Niño con discapacidad auditiva, sensible y reservado, apasionado por la lectura y el fútbol. A través de su historia, descubrimos el anhelo de ser comprendido e incluido.',
+    color: '#00b5e9',
+    bg: '#e0f5fd',
+    image: '/characters/juan.png',
+  },
+  {
+    name: 'Sofía',
+    role: 'Compañera Empática',
+    badge: 'Empatía & Amistad',
+    desc: 'Niña amable y comprensiva que se acerca a Juan con curiosidad y respeto, buscando una forma creativa de comunicarse con él a través de señas.',
+    color: '#e74f71',
+    bg: '#fde8ed',
+    image: '/characters/sofia.png',
+  },
+  {
+    name: 'Alejandro',
+    role: 'Compañero de Recreo',
+    badge: 'Energía & Equipo',
+    desc: 'Niño sociable, entusiasta y curioso al que le encanta jugar fútbol en el recreo. Descubre cómo derribar barreras para jugar todos juntos.',
+    color: '#10ac83',
+    bg: '#e0f5ef',
+    image: '/characters/alejandro.png',
+  },
+];
+
+const merchItems = [
+  { title: 'Camiseta Oficial Senia', img: '/merch/shirt.png', tag: 'Textil', desc: 'Camiseta de algodón suave con el logotipo oficial multicolor en el pecho.' },
+  { title: 'Sudadera / Hoodie', img: '/merch/hoodie.png', tag: 'Textil', desc: 'Sudadera cálida con el isotipo "ni" estampado en el pecho.' },
+  { title: 'Taza con Isotipo y Patrón', img: '/merch/cup.png', tag: 'Cerámica', desc: 'Taza con el isotipo azul y el patrón de señas ilustrado alrededor.' },
+  { title: 'Mochila Drawstring Bag', img: '/merch/backpack.png', tag: 'Accesorios', desc: 'Bolsa de tela ligera con cordones y arte de trazos coloridos.' },
+  { title: 'Tarjetas y Papelería', img: '/merch/letters.png', tag: 'Colección', desc: 'Tarjetas coleccionables con el abecedario de señas y datos del proyecto.' },
+];
+
+const signIcons = [
+  { letter: 'S', src: '/icons/s.png', color: '#f08322' },
+  { letter: 'E', src: '/icons/e.png', color: '#10ac83' },
+  { letter: 'N', src: '/icons/n.png', color: '#00b5e9' },
+  { letter: 'I', src: '/icons/i.png', color: '#fdc800' },
+  { letter: 'A', src: '/icons/a.png', color: '#e74f71' },
+];
+
+const extraIcons = [
+  { name: 'Balón de Fútbol', src: '/icons/football.png' },
+  { name: 'Cuaderno Escolar', src: '/icons/notebook.png' },
+  { name: 'Lentes / Anteojos', src: '/icons/glasses.png' },
+  { name: 'Pizarra / Cartel', src: '/icons/board.png' },
+  { name: 'Elefante Amigable', src: '/icons/elephant.png' },
+];
+
+const brandColors = [
+  { name: 'Crema', hex: '#fcf6ee', desc: 'Fondo limpio y suave' },
+  { name: 'Rosa Coral', hex: '#e74f71', desc: 'Empatía y sensibilidad' },
+  { name: 'Amarillo Claro', hex: '#fdc800', desc: 'Alegría y atención' },
+  { name: 'Azul Celeste', hex: '#00b5e9', desc: 'Comunicación y confianza' },
+  { name: 'Verde Turquesa', hex: '#10ac83', desc: 'Inclusión y crecimiento' },
+  { name: 'Naranja Coral', hex: '#f08322', desc: 'Creatividad y equilibrio' },
+];
+---
+
+<section
+  id="work"
+  style="padding: 85px 24px; background: var(--color-offwhite); position: relative;"
+>
+  <div style="max-width: 1120px; margin: 0 auto;">
+    
+    <!-- Header -->
+    <div style="text-align: center; margin-bottom: 56px;">
+      <div
+        style="display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 181, 233, 0.12); border: 2px solid var(--color-sky); border-radius: 100px; padding: 6px 18px; margin-bottom: 16px;"
+      >
+        <span style="font-size: 16px;">🎬</span>
+        <span
+          style="font-weight: 800; font-size: 13px; color: var(--color-sky); letter-spacing: 0.6px; text-transform: uppercase;"
+        >
+          NUESTRO TRABAJO
+        </span>
+      </div>
+      <h2
+        style="font-family: var(--font-display); font-size: clamp(30px, 5vw, 48px); color: var(--color-dark); margin-bottom: 12px;"
+      >
+        Nuestras Animaciones y Proyectos
+      </h2>
+      <Squiggle color="var(--color-sky)" style="margin: 0 auto 16px;" />
+      <p
+        style="font-size: 16.5px; color: #666; font-weight: 500; max-width: 600px; margin: 0 auto; line-height: 1.6;"
+      >
+        Desarrollamos historias animadas y herramientas didácticas para visibilizar la discapacidad auditiva infantil y crear vínculos de empatía.
+      </p>
+    </div>
+
+    <!-- Character Design Showcase -->
+    <div style="margin-bottom: 72px;">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <h3
+          style="font-family: var(--font-display); font-size: 28px; color: var(--color-dark); margin-bottom: 6px;"
+        >
+          Personajes del Cortometraje
+        </h3>
+        <p style="color: #777; font-weight: 600; font-size: 15px;">
+          Diseño de personajes protagonistas de nuestra historia animada
+        </p>
+      </div>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;"
+      >
+        {characters.map((char) => (
+          <div
+            class="card-hover"
+            style={`background: #ffffff; border-radius: 24px; padding: 26px 24px 32px; border: 2.5px solid ${char.color}35; box-shadow: 6px 8px 0px ${char.color}25; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative;`}
+          >
+            <!-- Badge Header (Placed naturally in layout to completely eliminate clipping) -->
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 16px;"
+            >
+              <span
+                style={`font-family: var(--font-display); font-size: 13px; color: ${char.color}; text-transform: uppercase; letter-spacing: 0.5px;`}
+              >
+                {char.role}
+              </span>
+              <span
+                style={`background: ${char.bg}; color: ${char.color}; border: 1.5px solid ${char.color}; border-radius: 100px; padding: 4px 14px; font-size: 12px; font-weight: 800; white-space: nowrap;`}
+              >
+                {char.badge}
+              </span>
+            </div>
+
+            <!-- Character Image Container -->
+            <div
+              style={`width: 100%; height: 260px; background: ${char.bg}; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; padding: 12px; border: 2px dashed ${char.color}; overflow: hidden;`}
+            >
+              <img
+                src={char.image}
+                alt={char.name}
+                style="max-height: 236px; max-width: 100%; object-fit: contain; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Name -->
+            <h4
+              style={`font-family: var(--font-display); font-size: 28px; color: ${char.color}; margin-bottom: 8px;`}
+            >
+              {char.name}
+            </h4>
+
+            <p
+              style="font-size: 14.5px; line-height: 1.6; color: #555; font-weight: 500;"
+            >
+              {char.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- ENTREGABLES CREATIVOS TABS SECTION -->
+    <div style="margin-bottom: 56px;" id="entregables">
+      
+      <!-- Section Header -->
+      <div style="text-align: center; margin-bottom: 32px;">
+        <div
+          style="display: inline-flex; align-items: center; gap: 8px; background: rgba(240, 131, 34, 0.12); border: 2px solid var(--color-orange); border-radius: 100px; padding: 6px 18px; margin-bottom: 12px;"
+        >
+          <span style="font-size: 16px;">📦</span>
+          <span
+            style="font-weight: 800; font-size: 13px; color: var(--color-orange); letter-spacing: 0.6px; text-transform: uppercase;"
+          >
+            ENTREGABLES CREATIVOS
+          </span>
+        </div>
+        <h3
+          style="font-family: var(--font-display); font-size: clamp(28px, 4.5vw, 40px); color: var(--color-dark); margin-bottom: 8px;"
+        >
+          Explora los Entregables de Senia
+        </h3>
+        <p style="color: #666; font-weight: 600; font-size: 16px;">
+          Selecciona una pestaña para ver los detalles y muestras de cada categoría
+        </p>
+      </div>
+
+      <!-- Individual Tabs Navigation -->
+      <div
+        style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 36px;"
+        role="tablist"
+      >
+        <button class="tab-btn active" data-tab="tab-producto" role="tab" aria-selected="true">
+          🎬 Producto de la marca
+        </button>
+        <button class="tab-btn" data-tab="tab-indumentaria" role="tab" aria-selected="false">
+          👕 Indumentaria (/merch)
+        </button>
+        <button class="tab-btn" data-tab="tab-publicidad" role="tab" aria-selected="false">
+          📢 Material Publicitario
+        </button>
+        <button class="tab-btn" data-tab="tab-identidad" role="tab" aria-selected="false">
+          🎨 Identidad Visual
+        </button>
+      </div>
+
+      <!-- TAB 1: PRODUCTO DE LA MARCA -->
+      <div id="tab-producto" class="tab-panel active" role="tabpanel">
+        <div
+          style="background: #ffffff; border-radius: 28px; padding: 36px; border: 2.5px solid var(--color-coral)30; box-shadow: 6px 10px 0px rgba(0,0,0,0.06);"
+        >
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+            <span style="font-size: 32px;">🎬</span>
+            <div>
+              <h4 style="font-family: var(--font-display); font-size: 24px; color: var(--color-coral);">
+                Animación Digital & Rompecabezas Educativo
+              </h4>
+              <p style="color: #666; font-size: 14.5px; font-weight: 600;">
+                Los dos pilares principales del producto creativo de Senia
+              </p>
+            </div>
+          </div>
+
+          <!-- Video Player & Storyboard Grid -->
+          <div style="display: grid; grid-template-columns: 1fr; gap: 28px; margin-bottom: 32px;" class="lg:grid-cols-2">
+            
+            <!-- Video Column -->
+            <div style="background: var(--color-offwhite); border-radius: 20px; padding: 20px; border: 2px solid #e8ded2;">
+              <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <span>▶️</span> Adelanto de Animación
+              </h5>
+              <div style="position: relative; border-radius: 14px; overflow: hidden; background: #000; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                <video
+                  controls
+                  playsinline
+                  style="width: 100%; max-height: 280px; display: block; object-fit: cover;"
+                  poster="/background2.png"
+                >
+                  <source src="/animation.mp4" type="video/mp4" />
+                  Tu navegador no soporta la reproducción de video.
+                </video>
+              </div>
+              <p style="font-size: 13.5px; color: #555; margin-top: 10px; font-weight: 500;">
+                Un vistazo al proceso de animación 2D y la expresividad de los personajes en movimiento.
+              </p>
+            </div>
+
+            <!-- Storyboard Column -->
+            <div style="background: var(--color-offwhite); border-radius: 20px; padding: 20px; border: 2px solid #e8ded2;">
+              <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                <span>📋</span> Primer Storyboard Digital
+              </h5>
+              <div style="border-radius: 14px; overflow: hidden; background: #fff; border: 1.5px solid #d5c8b5;">
+                <img
+                  src="/storyboard.png"
+                  alt="Storyboard Digital Senia"
+                  style="width: 100%; height: auto; max-height: 280px; object-fit: contain; display: block;"
+                />
+              </div>
+              <p style="font-size: 13.5px; color: #555; margin-top: 10px; font-weight: 500;">
+                Estructura narrativa y planteamiento visual de las escenas clave en la escuela.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Fondos de la animación -->
+          <div style="margin-bottom: 24px;">
+            <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 14px;">
+              🎨 Fondos e Ilustración de Entornos
+            </h5>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+              <div style="border-radius: 16px; overflow: hidden; border: 2px solid #e0d5c5; box-shadow: 2px 3px 0 rgba(0,0,0,0.06);">
+                <img src="/background1.png" alt="Fondo Árbol y Cancha" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+                <div style="padding: 10px 14px; background: #fff; font-size: 13px; font-weight: 700; color: #555;">
+                  Área escolar y jardín
+                </div>
+              </div>
+              <div style="border-radius: 16px; overflow: hidden; border: 2px solid #e0d5c5; box-shadow: 2px 3px 0 rgba(0,0,0,0.06);">
+                <img src="/background2.png" alt="Fondo Recreo y Cancha de Fútbol" style="width: 100%; height: 180px; object-fit: cover; display: block;" />
+                <div style="padding: 10px 14px; background: #fff; font-size: 13px; font-weight: 700; color: #555;">
+                  Cancha de recreo y portería
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rompecabezas Card -->
+          <div style="background: rgba(0, 181, 233, 0.08); border-left: 5px solid var(--color-sky); border-radius: 0 16px 16px 0; padding: 18px 24px;">
+            <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-sky); margin-bottom: 6px;">
+              🧩 El Rompecabezas Educativo Inclusivo
+            </h5>
+            <p style="font-size: 14.5px; color: #444; line-height: 1.6; font-weight: 500;">
+              Diseñado como experiencia táctil que complementa la animación, permitiendo a padres, docentes y niños aprender señas del abecedario jugando en equipo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: INDUMENTARIA (/MERCH) -->
+      <div id="tab-indumentaria" class="tab-panel" role="tabpanel">
+        <div
+          style="background: #ffffff; border-radius: 28px; padding: 36px; border: 2.5px solid var(--color-orange)30; box-shadow: 6px 10px 0px rgba(0,0,0,0.06);"
+        >
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+            <span style="font-size: 32px;">👕</span>
+            <div>
+              <h4 style="font-family: var(--font-display); font-size: 24px; color: var(--color-orange);">
+                Indumentaria & Merchandising Oficial
+              </h4>
+              <p style="color: #666; font-size: 14.5px; font-weight: 600;">
+                Prendas y accesorios diseñados para visibilizar el mensaje de inclusión en el día a día
+              </p>
+            </div>
+          </div>
+
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px;"
+          >
+            {merchItems.map((item) => (
+              <div
+                class="card-hover"
+                style="background: var(--color-offwhite); border: 2px solid #ece2d4; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; align-items: center; text-align: center;"
+              >
+                <div
+                  style="width: 100%; height: 180px; background: #ffffff; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; overflow: hidden; padding: 10px; border: 1px solid #eee;"
+                >
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    style="max-height: 160px; max-width: 100%; object-fit: contain;"
+                    loading="lazy"
+                  />
+                </div>
+                <span
+                  style="background: rgba(240, 131, 34, 0.15); color: var(--color-orange); border-radius: 100px; padding: 3px 10px; font-size: 11px; font-weight: 800; text-transform: uppercase; margin-bottom: 6px;"
+                >
+                  {item.tag}
+                </span>
+                <h5 style="font-family: var(--font-display); font-size: 17px; color: var(--color-dark); margin-bottom: 6px;">
+                  {item.title}
+                </h5>
+                <p style="font-size: 12.5px; color: #666; font-weight: 500; line-height: 1.45;">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: MATERIAL PUBLICITARIO -->
+      <div id="tab-publicidad" class="tab-panel" role="tabpanel">
+        <div
+          style="background: #ffffff; border-radius: 28px; padding: 36px; border: 2.5px solid var(--color-sky)30; box-shadow: 6px 10px 0px rgba(0,0,0,0.06);"
+        >
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+            <span style="font-size: 32px;">📢</span>
+            <div>
+              <h4 style="font-family: var(--font-display); font-size: 24px; color: var(--color-sky);">
+                Material Publicitario & Papelería
+              </h4>
+              <p style="color: #666; font-size: 14.5px; font-weight: 600;">
+                Herramientas de comunicación y difusión para eventos, escuelas e instituciones
+              </p>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr; gap: 28px;" class="lg:grid-cols-2">
+            
+            <!-- Tarjetas de Presentación / Colección -->
+            <div style="background: var(--color-offwhite); border-radius: 20px; padding: 22px; border: 2px solid #e0d5c5;">
+              <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 12px;">
+                💳 Tarjetas Corporativas y de Contacto
+              </h5>
+              <div style="border-radius: 14px; overflow: hidden; background: #fff; border: 1.5px solid #d5c8b5; margin-bottom: 12px;">
+                <img
+                  src="/merch/letters.png"
+                  alt="Tarjetas de contacto Senia"
+                  style="width: 100%; height: 220px; object-fit: cover; display: block;"
+                />
+              </div>
+              <p style="font-size: 13.5px; color: #555; line-height: 1.55; font-weight: 500;">
+                Diseño editorial limpio con el patrón s-e-n-i-a en relieve y datos de contacto de cada integrante del equipo.
+              </p>
+            </div>
+
+            <!-- Material Didáctico y Storyboard -->
+            <div style="background: var(--color-offwhite); border-radius: 20px; padding: 22px; border: 2px solid #e0d5c5;">
+              <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 12px;">
+                📜 Storyboard Digital de Difusión
+              </h5>
+              <div style="border-radius: 14px; overflow: hidden; background: #fff; border: 1.5px solid #d5c8b5; margin-bottom: 12px;">
+                <img
+                  src="/storyboard.png"
+                  alt="Storyboard Digital de Difusión"
+                  style="width: 100%; height: 220px; object-fit: contain; display: block;"
+                />
+              </div>
+              <p style="font-size: 13.5px; color: #555; line-height: 1.55; font-weight: 500;">
+                Material de exhibición utilizado en defensas académicas y presentaciones para festivales y exposiciones.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: IDENTIDAD VISUAL -->
+      <div id="tab-identidad" class="tab-panel" role="tabpanel">
+        <div
+          style="background: #ffffff; border-radius: 28px; padding: 36px; border: 2.5px solid var(--color-mint)30; box-shadow: 6px 10px 0px rgba(0,0,0,0.06);"
+        >
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+            <span style="font-size: 32px;">🎨</span>
+            <div>
+              <h4 style="font-family: var(--font-display); font-size: 24px; color: var(--color-mint);">
+                Identidad Visual Completa
+              </h4>
+              <p style="color: #666; font-size: 14.5px; font-weight: 600;">
+                Logotipo, isotipo, variantes de color y sistema gráfico de señas
+              </p>
+            </div>
+          </div>
+
+          <!-- Logotipo y Variantes -->
+          <div style="margin-bottom: 32px;">
+            <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 12px;">
+              ✨ Variantes del Logotipo Principal
+            </h5>
+            <div style="border-radius: 18px; overflow: hidden; border: 2px solid #e0d5c5; background: #fff; padding: 16px;">
+              <img
+                src="/senia-variantes.png"
+                alt="Variantes de color del logotipo Senia"
+                style="width: 100%; height: auto; max-height: 240px; object-fit: contain; display: block; margin: 0 auto;"
+              />
+            </div>
+          </div>
+
+          <!-- Isotipo y Variantes -->
+          <div style="margin-bottom: 32px;">
+            <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 12px;">
+              🌟 Variantes del Isotipo "ni"
+            </h5>
+            <div style="border-radius: 18px; overflow: hidden; border: 2px solid #e0d5c5; background: #fff; padding: 16px;">
+              <img
+                src="/senia-isotipos.png"
+                alt="Variantes del isotipo Senia"
+                style="width: 100%; height: auto; max-height: 200px; object-fit: contain; display: block; margin: 0 auto;"
+              />
+            </div>
+          </div>
+
+          <!-- Sistema Gráfico de Señas -->
+          <div style="margin-bottom: 32px;">
+            <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 12px;">
+              🤟 Sistema Gráfico de Señas (s - e - n - i - a)
+            </h5>
+            <div
+              style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; background: var(--color-offwhite); border-radius: 20px; padding: 24px; border: 2px dashed var(--color-mint);"
+            >
+              {signIcons.map((sign) => (
+                <div
+                  style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 90px;"
+                >
+                  <div
+                    style={`width: 70px; height: 70px; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2.5px solid ${sign.color}; box-shadow: 2px 3px 0 rgba(0,0,0,0.08);`}
+                  >
+                    <img src={sign.src} alt={`Seña ${sign.letter}`} style="width: 44px; height: 44px; object-fit: contain;" />
+                  </div>
+                  <span style={`font-family: var(--font-display); font-size: 20px; color: ${sign.color};`}>
+                    {sign.letter}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Elementos Gráficos de Apoyo -->
+          <div style="margin-bottom: 32px;">
+            <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 12px;">
+              🎨 Elementos Gráficos Varios
+            </h5>
+            <div
+              style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;"
+            >
+              {extraIcons.map((ico) => (
+                <div
+                  style="background: var(--color-offwhite); border-radius: 100px; padding: 8px 18px; border: 1.5px solid #e0d5c5; display: flex; align-items: center; gap: 10px;"
+                >
+                  <img src={ico.src} alt={ico.name} style="width: 28px; height: 28px; object-fit: contain;" />
+                  <span style="font-size: 13px; font-weight: 700; color: #444;">{ico.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Muestrario de Paleta Oficial -->
+          <div>
+            <h5 style="font-family: var(--font-display); font-size: 18px; color: var(--color-dark); margin-bottom: 12px;">
+              🎨 Paleta Cromática Oficial
+            </h5>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px;">
+              {brandColors.map((col) => (
+                <div style="background: var(--color-offwhite); border-radius: 14px; padding: 12px; border: 1px solid #e0d5c5; display: flex; align-items: center; gap: 10px;">
+                  <div style={`width: 32px; height: 32px; background-color: ${col.hex}; border-radius: 8px; border: 1px solid rgba(0,0,0,0.1);`} />
+                  <div>
+                    <div style="font-family: var(--font-display); font-size: 13px; color: #333;">{col.name}</div>
+                    <div style="font-size: 11px; color: #777; font-weight: 700;">{col.hex}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Banner -->
+    <div
+      style="background: linear-gradient(135deg, var(--color-coral) 0%, var(--color-orange) 100%); border-radius: 24px; padding: 36px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; box-shadow: 6px 8px 0px rgba(0,0,0,0.12); position: relative; overflow: hidden;"
+    >
+      <div
+        style="position: absolute; inset: 0; background-image: url('/background.png'); background-size: 240px; opacity: 0.14; pointer-events: none;"
+      ></div>
+
+      <div style="position: relative; z-index: 2;">
+        <h3
+          style="font-family: var(--font-display); font-size: clamp(22px, 3.5vw, 28px); color: #fff; margin-bottom: 6px;"
+        >
+          ¿Quieres ver más adelantos pronto?
+        </h3>
+        <p style="color: rgba(255,255,255,0.95); font-weight: 600; font-size: 15px;">
+          Síguenos en redes sociales para ver storyboards, bocetos y el proceso creativo. 🎉
+        </p>
+      </div>
+
+      <a
+        href="#social"
+        class="btn-yellow"
+        style="position: relative; z-index: 2; white-space: nowrap;"
+      >
+        📱 Ver Redes Sociales
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Tab Switching Logic
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-tab');
+      if (!targetId) return;
+
+      // Update button states
+      tabButtons.forEach((b) => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+
+      // Update panel states
+      tabPanels.forEach((panel) => {
+        if (panel.id === targetId) {
+          panel.classList.add('active');
+        } else {
+          panel.classList.remove('active');
+        }
+      });
+    });
+  });
+</script>

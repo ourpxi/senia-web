@@ -1,0 +1,34 @@
+---
+interface Props {
+  height?: number;
+  colors?: string[];
+  class?: string;
+  style?: string;
+}
+
+const defaultColors = [
+  '#e74f71', // Rosa Coral
+  '#fdc800', // Amarillo Claro
+  '#00b5e9', // Azul Celeste
+  '#f08322', // Naranja Coral
+  '#10ac83', // Verde Turquesa
+];
+
+const {
+  height = 8,
+  colors = defaultColors,
+  class: className = '',
+  style = '',
+} = Astro.props;
+---
+
+<div
+  class={className}
+  style={`display: flex; height: ${height}px; width: 100%; overflow: hidden; ${style}`}
+  aria-hidden="true"
+>
+  {colors.map((c) => (
+    <div style={`flex: 1; background-color: ${c};`} />
+  ))}
+</div>
+

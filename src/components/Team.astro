@@ -1,0 +1,130 @@
+---
+import Squiggle from './decorative/Squiggle.astro';
+
+const teamMembers = [
+  {
+    name: 'Joshua Vargas',
+    role: 'Animador principal e ilustrador',
+    specialty: 'Diseño de personajes & Storyboard',
+    color: '#e74f71',
+    bg: '#fde8ed',
+    emoji: '🎨',
+    rotate: '-2deg',
+  },
+  {
+    name: 'Josué Monge',
+    role: 'Animador principal e ilustrador',
+    specialty: 'Animación 2D & Fondos digitales',
+    color: '#00b5e9',
+    bg: '#e0f5fd',
+    emoji: '✏️',
+    rotate: '1.5deg',
+  },
+  {
+    name: 'Laura Forbes',
+    role: 'Diseñadora gráfica',
+    specialty: 'Identidad visual & Sistema de señas',
+    color: '#10ac83',
+    bg: '#e0f5ef',
+    emoji: '🖌️',
+    rotate: '-1deg',
+  },
+  {
+    name: 'Isabella Segura',
+    role: 'Diseñadora gráfica',
+    specialty: 'Rompecabezas educativo & Material impreso',
+    color: '#f08322',
+    bg: '#fdeee0',
+    emoji: '💡',
+    rotate: '2deg',
+  },
+];
+---
+
+<section
+  id="team"
+  style="padding: 85px 24px; background: #ffffff; position: relative;"
+>
+  <div style="max-width: 1120px; margin: 0 auto;">
+    
+    <!-- Header -->
+    <div style="text-align: center; margin-bottom: 56px;">
+      <div
+        style="display: inline-flex; align-items: center; gap: 8px; background: rgba(16, 172, 131, 0.12); border: 2px solid var(--color-mint); border-radius: 100px; padding: 6px 18px; margin-bottom: 16px;"
+      >
+        <span style="font-size: 16px;">👥</span>
+        <span
+          style="font-weight: 800; font-size: 13px; color: var(--color-mint); letter-spacing: 0.6px; text-transform: uppercase;"
+        >
+          EQUIPO CREATIVO
+        </span>
+      </div>
+      <h2
+        style="font-family: var(--font-display); font-size: clamp(30px, 5vw, 48px); color: var(--color-dark); margin-bottom: 12px;"
+      >
+        Conoce al Equipo
+      </h2>
+      <Squiggle color="var(--color-mint)" style="margin: 0 auto 16px;" />
+      <p
+        style="font-size: 16.5px; color: #666; font-weight: 500; max-width: 520px; margin: 0 auto; line-height: 1.6;"
+      >
+        Cuatro artistas apasionados que dan vida a cada historia con creatividad, compromiso y mucho corazón 💛
+      </p>
+    </div>
+
+    <!-- Team Cards Grid -->
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px;"
+    >
+      {teamMembers.map((member) => (
+        <div
+          class="card-hover"
+          style={`background: var(--color-offwhite); border-radius: 24px; padding: 36px 24px; text-align: center; border: 2.5px solid ${member.bg}; box-shadow: 5px 6px 0px ${member.color}35; transform: rotate(${member.rotate}); cursor: default; display: flex; flex-direction: column; align-items: center; justify-content: space-between;`}
+        >
+          <div>
+            <!-- Emoji Avatar -->
+            <div
+              style={`width: 90px; height: 90px; background: ${member.bg}; border-radius: 50% 35% 50% 35%; display: flex; align-items: center; justify-content: center; font-size: 44px; margin: 0 auto 20px; border: 3px solid ${member.color}; box-shadow: 2px 3px 0 rgba(0,0,0,0.06);`}
+            >
+              {member.emoji}
+            </div>
+
+            <!-- Name badge -->
+            <div
+              style={`display: inline-block; background: ${member.color}; color: #ffffff; border-radius: 100px; padding: 6px 18px; font-family: var(--font-display); font-size: 20px; margin-bottom: 12px; box-shadow: 2px 2px 0 rgba(0,0,0,0.1);`}
+            >
+              {member.name}
+            </div>
+
+            <!-- Role -->
+            <p
+              style="font-size: 14.5px; color: #333; font-weight: 700; line-height: 1.4; margin-bottom: 6px;"
+            >
+              {member.role}
+            </p>
+
+            <!-- Specialty -->
+            <p
+              style="font-size: 12.5px; color: #666; font-weight: 600; line-height: 1.4;"
+            >
+              {member.specialty}
+            </p>
+          </div>
+
+          <!-- Decorative Dots -->
+          <div
+            style="display: flex; justify-content: center; gap: 8px; margin-top: 20px;"
+          >
+            {[0, 1, 2].map((i) => (
+              <div
+                style={`width: 8px; height: 8px; border-radius: 50%; background: ${i === 1 ? member.color : `${member.color}50`};`}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+

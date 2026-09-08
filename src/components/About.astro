@@ -1,0 +1,222 @@
+---
+import Squiggle from './decorative/Squiggle.astro';
+
+const values = [
+  { name: 'Empatía', desc: 'Ponernos en el lugar del otro y sentir con el corazón.', icon: '💛', color: '#e74f71', bg: '#fde8ed' },
+  { name: 'Creatividad', desc: 'Historias y mundos visuales innovadores que cautivan.', icon: '🎨', color: '#f08322', bg: '#fdeee0' },
+  { name: 'Solidaridad', desc: 'Caminar juntos y tender la mano a quien lo necesita.', icon: '🤝', color: '#fdc800', bg: '#fef8e2' },
+  { name: 'Amabilidad', desc: 'Gestos y miradas que construyen puentes de amistad.', icon: '✨', color: '#00b5e9', bg: '#e0f5fd' },
+  { name: 'Respeto', desc: 'Valorar la diversidad y las identidades de cada persona.', icon: '🌱', color: '#10ac83', bg: '#e0f5ef' },
+  { name: 'Inclusión', desc: 'Espacios y proyectos donde todos los niños tienen voz y lugar.', icon: '🌈', color: '#8a4fe7', bg: '#f1eafc' },
+];
+
+const audiences = [
+  {
+    category: 'Animación 2D',
+    target: 'Niños y niñas entre 6 y 12 años, y sus familias',
+    desc: 'Historias coloridas y personajes entrañables pensados para generar empatía y abrir conversaciones en casa y en el aula.',
+    icon: '🎬',
+    color: '#e74f71',
+  },
+  {
+    category: 'Rompecabezas Educativo',
+    target: 'Padres, madres, personal médico y educadores',
+    desc: 'Herramienta lúdica y tangible diseñada para enseñar lenguaje de señas básico y derribar barreras de comunicación.',
+    icon: '🧩',
+    color: '#00b5e9',
+  },
+  {
+    category: 'Comunidad Inclusiva',
+    target: 'Docentes y profesionales de la salud en Costa Rica',
+    desc: 'Promoción de entornos educativos más accesibles, respetuosos y conscientes de las necesidades de la niñez con sordera.',
+    icon: '🏫',
+    color: '#10ac83',
+  },
+];
+---
+
+<section
+  id="about"
+  style="padding: 85px 24px; background: #ffffff; position: relative;"
+>
+  <div style="max-width: 1120px; margin: 0 auto;">
+    
+    <!-- Emotional Quote Callout Box -->
+    <div
+      style="background: linear-gradient(135deg, #10ac83 0%, #00b5e9 100%); border-radius: 28px; padding: 48px 36px; color: #ffffff; text-align: center; margin-bottom: 72px; box-shadow: 8px 10px 0px rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;"
+    >
+      <!-- Background pattern overlay -->
+      <div
+        style="position: absolute; inset: 0; background-image: url('/background.png'); background-size: 260px; opacity: 0.12; pointer-events: none;"
+      ></div>
+
+      <div style="position: relative; z-index: 2; max-width: 780px; margin: 0 auto;">
+        <span style="font-size: 36px; display: block; margin-bottom: 12px;"><img src="icons/glasses.png" alt="Glasses Icon" height="64" width="auto"/></span>
+        <blockquote
+          style="font-family: var(--font-display); font-size: clamp(24px, 4.5vw, 38px); line-height: 1.35; margin-bottom: 16px;"
+        >
+          “Escuchar va más allá de los oídos; comprender es la verdadera conexión.”
+        </blockquote>
+        <p style="font-size: 16px; font-weight: 700; opacity: 0.95; letter-spacing: 0.5px;">
+          — Filosofía Senia · Señas que nos unen
+        </p>
+      </div>
+    </div>
+
+    <!-- Section Header -->
+    <div style="text-align: center; margin-bottom: 56px;">
+      <div
+        style="display: inline-flex; align-items: center; gap: 8px; background: rgba(16, 172, 131, 0.12); border: 2px solid var(--color-mint); border-radius: 100px; padding: 6px 18px; margin-bottom: 16px;"
+      >
+        <span style="font-size: 16px;">🌱</span>
+        <span
+          style="font-weight: 800; font-size: 13px; color: var(--color-mint); letter-spacing: 0.6px; text-transform: uppercase;"
+        >
+          NUESTRA ESENCIA Y PROPÓSITO
+        </span>
+      </div>
+      <h2
+        style="font-family: var(--font-display); font-size: clamp(30px, 5vw, 48px); color: var(--color-dark); margin-bottom: 12px;"
+      >
+        Misión, Visión y Propuesta
+      </h2>
+      <Squiggle color="var(--color-mint)" style="margin: 0 auto 16px;" />
+      <p style="font-size: 16.5px; color: #666; font-weight: 500; max-width: 620px; margin: 0 auto;">
+        Senia utiliza una <strong>animación y un rompecabezas</strong> para sensibilizar sobre la vida de los niños y niñas con discapacidad auditiva, promoviendo la empatía, la inclusión y la comprensión de sus necesidades.
+      </p>
+    </div>
+
+    <!-- Mission, Vision & Objective 3-Column Grid -->
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin-bottom: 64px;"
+    >
+      <!-- Misión -->
+      <div
+        class="card-hover"
+        style="background: var(--color-offwhite); border: 2.5px solid #f2e3d0; border-radius: 24px; padding: 36px 28px; box-shadow: 4px 4px 0px rgba(240, 131, 34, 0.2); display: flex; flex-direction: column;"
+      >
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+          <div
+            style="width: 50px; height: 50px; background: var(--color-orange); border-radius: 50% 30% 50% 30%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;"
+          >
+            <img src="icons/n.png" alt="Sign Language Letter N" height="32" width="32"/>
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: 24px; color: var(--color-dark);">
+            Misión
+          </h3>
+        </div>
+        <p style="font-size: 15px; line-height: 1.7; color: #555; font-weight: 500;">
+          Desarrollar una experiencia visual y educativa que promueve la empatía, la inclusión y la comprensión hacia los niños y niñas con discapacidad auditiva. A través de la animación y un rompecabezas, sensibilizamos sobre los desafíos cotidianos, contribuyendo a entornos más accesibles y respetuosos.
+        </p>
+      </div>
+
+      <!-- Visión -->
+      <div
+        class="card-hover"
+        style="background: var(--color-offwhite); border: 2.5px solid #d2effc; border-radius: 24px; padding: 36px 28px; box-shadow: 4px 4px 0px rgba(0, 181, 233, 0.2); display: flex; flex-direction: column;"
+      >
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+          <div
+            style="width: 50px; height: 50px; background: var(--color-sky); border-radius: 30% 50% 30% 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;"
+          >
+            <img src="icons/i.png" alt="Sign Language Letter I" height="32" width="32"/>
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: 24px; color: var(--color-dark);">
+            Visión
+          </h3>
+        </div>
+        <p style="font-size: 15px; line-height: 1.7; color: #555; font-weight: 500;">
+          Posicionarse como un producto reconocido por promover la inclusión y la sensibilización sobre la discapacidad auditiva infantil mediante una propuesta creativa, educativa y emocional que inspire cambios positivos en la sociedad.
+        </p>
+      </div>
+
+      <!-- Objetivo -->
+      <div
+        class="card-hover"
+        style="background: var(--color-offwhite); border: 2.5px solid #d0f2e5; border-radius: 24px; padding: 36px 28px; box-shadow: 4px 4px 0px rgba(16, 172, 131, 0.2); display: flex; flex-direction: column;"
+      >
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+          <div
+            style="width: 50px; height: 50px; background: var(--color-mint); border-radius: 50% 30% 50% 30%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;"
+          >
+            <img src="icons/a.png" alt="Sign Language Letter A" height="32" width="32"/>
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: 24px; color: var(--color-dark);">
+            Objetivo
+          </h3>
+        </div>
+        <p style="font-size: 15px; line-height: 1.7; color: #555; font-weight: 500;">
+          Diseñar un producto enfocado en visibilizar los desafíos que enfrentan los niños y niñas con discapacidad auditiva, promoviendo la empatía, la inclusión y el respeto mediante una animación 2D y un rompecabezas educativo interactivo.
+        </p>
+      </div>
+    </div>
+
+    <!-- Target Audience (Público Objetivo) -->
+    <div style="margin-bottom: 64px;">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <h3 style="font-family: var(--font-display); font-size: 28px; color: var(--color-dark); margin-bottom: 8px;">
+          Público Objetivo
+        </h3>
+        <p style="color: #666; font-weight: 600; font-size: 15.5px;">
+          Familias, docentes y niños unidos por la inclusión y el respeto a la diversidad
+        </p>
+      </div>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;"
+      >
+        {audiences.map((aud) => (
+          <div
+            class="card-hover"
+            style={`background: var(--color-offwhite); border: 2px solid ${aud.color}35; border-radius: 22px; padding: 28px 22px; display: flex; flex-direction: column; gap: 10px;`}
+          >
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="font-size: 32px;">{aud.icon}</span>
+              <div>
+                <span style={`font-size: 12px; font-weight: 800; color: ${aud.color}; text-transform: uppercase; letter-spacing: 0.5px;`}>
+                  {aud.category}
+                </span>
+                <h4 style="font-family: var(--font-display); font-size: 17px; color: #333;">
+                  {aud.target}
+                </h4>
+              </div>
+            </div>
+            <p style="font-size: 14px; color: #666; line-height: 1.55; font-weight: 500;">
+              {aud.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Valores Grid -->
+    <div style="text-align: center; margin-bottom: 32px;">
+      <h3 style="font-family: var(--font-display); font-size: 28px; color: var(--color-dark); margin-bottom: 8px;">
+        Valores que nos Guían
+      </h3>
+      <p style="color: #666; font-weight: 600; font-size: 16px;">
+        Los pilares que inspiran cada historia, trazo y personaje de Senia.
+      </p>
+    </div>
+
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 18px;"
+    >
+      {values.map((val) => (
+        <div
+          class="card-hover"
+          style={`background: ${val.bg}; border: 2px solid ${val.color}35; border-radius: 20px; padding: 24px 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;`}
+        >
+          <div style="font-size: 32px;">{val.icon}</div>
+          <h4 style={`font-family: var(--font-display); font-size: 19px; color: ${val.color};`}>
+            {val.name}
+          </h4>
+          <p style="font-size: 12.5px; color: #555; font-weight: 600; line-height: 1.4;">
+            {val.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

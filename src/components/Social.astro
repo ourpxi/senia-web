@@ -1,0 +1,142 @@
+---
+import Squiggle from './decorative/Squiggle.astro';
+import Star from './decorative/Star.astro';
+
+const otherPlatforms = [
+  { label: 'YouTube', icon: '▶', color: '#ff0000', hint: 'Próximamente', url: '#' },
+  { label: 'TikTok', icon: '♪', color: '#111111', hint: 'Próximamente', url: '#' },
+  { label: 'Facebook', icon: 'f', color: '#1877f2', hint: 'Próximamente', url: '#' },
+];
+---
+
+<section
+  id="social"
+  style="padding: 90px 24px; background-color: var(--color-offwhite); background-image: url('/background.png'); background-repeat: repeat; background-size: 380px; position: relative; overflow: hidden;"
+>
+  <!-- Inner container with high contrast cards -->
+  <div style="max-width: 1120px; margin: 0 auto; position: relative; z-index: 2;">
+    
+    <!-- Header with semi-transparent backdrop badge for perfect readability -->
+    <div style="text-align: center; margin-bottom: 56px;">
+      <div
+        style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; border: 2.5px solid var(--color-orange); border-radius: 100px; padding: 7px 22px; margin-bottom: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.06);"
+      >
+        <span style="font-size: 16px;">📱</span>
+        <span
+          style="font-weight: 800; font-size: 13px; color: var(--color-orange); letter-spacing: 0.6px; text-transform: uppercase;"
+        >
+          REDES SOCIALES
+        </span>
+      </div>
+      <div
+        style="display: inline-block; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(6px); border-radius: 20px; padding: 12px 28px; margin-bottom: 8px;"
+      >
+        <h2
+          style="font-family: var(--font-display); font-size: clamp(32px, 5.5vw, 50px); color: var(--color-dark); margin: 0;"
+        >
+          Síguenos y Conecta
+        </h2>
+      </div>
+      <br />
+      <Squiggle color="var(--color-orange)" style="margin: 0 auto 16px;" />
+      <p
+        style="font-size: 16.5px; color: #444; font-weight: 600; max-width: 520px; margin: 0 auto; line-height: 1.6; background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(4px); border-radius: 100px; padding: 6px 20px; display: inline-block;"
+      >
+        Mantente al día con nuestros proyectos, adelantos del cortometraje y novedades de Senia.
+      </p>
+    </div>
+
+    <!-- Instagram Featured Hero Card -->
+    <div style="max-width: 520px; margin: 0 auto 48px; position: relative;">
+      <div
+        style="background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border-radius: 28px; padding: 44px 32px; text-align: center; box-shadow: 10px 14px 0px rgba(0,0,0,0.14); position: relative; overflow: hidden; border: 3px solid rgba(255,255,255,0.4);"
+      >
+        <!-- Background accents -->
+        <div
+          style="position: absolute; top: -30px; right: -30px; width: 110px; height: 110px; background: rgba(255,255,255,0.12); border-radius: 50%;"
+        ></div>
+        <div
+          style="position: absolute; bottom: -20px; left: -20px; width: 90px; height: 90px; background: rgba(255,255,255,0.08); border-radius: 50%;"
+        ></div>
+
+        <!-- Instagram Icon -->
+        <div
+          style="width: 80px; height: 80px; background: rgba(255,255,255,0.24); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; backdrop-filter: blur(4px); box-shadow: 0 6px 14px rgba(0,0,0,0.12);"
+        >
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="white">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+            />
+          </svg>
+        </div>
+
+        <div
+          style="font-family: var(--font-display); font-size: 32px; color: #fff; margin-bottom: 10px;"
+        >
+          Instagram Oficial
+        </div>
+
+        <div
+          style="display: inline-block; background: rgba(255,255,255,0.25); border-radius: 100px; padding: 8px 24px; margin-bottom: 24px; backdrop-filter: blur(4px);"
+        >
+          <span
+            style="color: #ffffff; font-weight: 800; font-size: 20px; letter-spacing: 0.5px;"
+          >
+            @seniaanimations
+          </span>
+        </div>
+
+        <div>
+          <a
+            href="https://instagram.com/seniaanimations"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+            style="background: #ffffff; color: #e74f71; box-shadow: 4px 4px 0 rgba(0,0,0,0.15); font-size: 16px; padding: 14px 36px;"
+          >
+            ¡Síguenos en Instagram! 🎉
+          </a>
+        </div>
+      </div>
+
+      <!-- Floating decorative stars -->
+      <Star
+        color="var(--color-yellow)"
+        size={32}
+        style="position: absolute; top: -16px; left: -16px; z-index: 3;"
+      />
+      <Star
+        color="var(--color-mint)"
+        size={26}
+        style="position: absolute; bottom: 16px; right: -16px; z-index: 3;"
+      />
+    </div>
+
+    <!-- Other Platforms -->
+    <div
+      style="display: flex; flex-wrap: wrap; gap: 18px; justify-content: center;"
+    >
+      {otherPlatforms.map((plat) => (
+        <div
+          class="card-hover"
+          style={`display: flex; align-items: center; gap: 14px; background: #ffffff; border: 2.5px dashed ${plat.color}50; border-radius: 100px; padding: 14px 28px; box-shadow: 0 6px 12px rgba(0,0,0,0.06);`}
+        >
+          <div
+            style={`width: 42px; height: 42px; background: ${plat.color}; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 17px;`}
+          >
+            {plat.icon}
+          </div>
+          <div style="text-align: left;">
+            <div style="font-family: var(--font-display); font-size: 16px; color: #333;">
+              {plat.label}
+            </div>
+            <div style="font-size: 12px; color: #888; font-weight: 700;">
+              {plat.hint}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

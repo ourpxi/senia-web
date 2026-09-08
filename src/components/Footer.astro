@@ -1,0 +1,61 @@
+---
+const footerColors = ['#e74f71', '#fdc800', '#00b5e9', '#f08322', '#10ac83'];
+---
+
+<footer
+  style="background: #1a1a2e; padding: 50px 24px 36px; text-align: center; color: #ffffff; position: relative;"
+>
+  <div style="max-width: 1120px; margin: 0 auto;">
+    
+    <!-- Full Rectangular Logo -->
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px;">
+      <a href="#home" aria-label="Volver al inicio" style="display: inline-block;">
+        <img
+          src="/senialogo.webp"
+          alt="Senia Logo Completo"
+          style="width: 200px; height: auto; object-fit: contain; filter: brightness(1.05);"
+        />
+      </a>
+      <p style="font-family: var(--font-display); font-size: 17px; color: var(--color-yellow); letter-spacing: 0.5px;">
+        “Señas que nos unen”
+      </p>
+    </div>
+
+    <!-- Quick Footer Links -->
+    <div
+      style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-bottom: 28px;"
+    >
+      <a href="#home" style="color: rgba(255,255,255,0.75); text-decoration: none; font-weight: 700; font-size: 14px;">Inicio</a>
+      <a href="#about" style="color: rgba(255,255,255,0.75); text-decoration: none; font-weight: 700; font-size: 14px;">Sobre Senia</a>
+      <a href="#work" style="color: rgba(255,255,255,0.75); text-decoration: none; font-weight: 700; font-size: 14px;">Nuestro Trabajo</a>
+      <a href="#team" style="color: rgba(255,255,255,0.75); text-decoration: none; font-weight: 700; font-size: 14px;">Equipo</a>
+      <a href="#social" style="color: rgba(255,255,255,0.75); text-decoration: none; font-weight: 700; font-size: 14px;">Redes Sociales</a>
+    </div>
+
+    <!-- Brand Color Dots -->
+    <div
+      style="display: flex; justify-content: center; gap: 10px; margin-bottom: 24px;"
+    >
+      {footerColors.map((c) => (
+        <div
+          style={`width: 12px; height: 12px; background-color: ${c}; border-radius: 50%; box-shadow: 0 0 6px ${c}60;`}
+        />
+      ))}
+    </div>
+
+    <!-- Copyright & Credits -->
+    <p
+      style="color: rgba(255, 255, 255, 0.55); font-size: 13.5px; font-weight: 500; line-height: 1.6; margin-bottom: 10px;"
+    >
+      © 2026 Senia Animations · Estudio de Animación 2D · Costa Rica<br />
+      Sensibilizando e integrando a través del arte y la educación infantil.
+    </p>
+
+    <p
+      style="color: rgba(255, 255, 255, 0.45); font-size: 12.5px; font-weight: 600; letter-spacing: 0.5px;"
+    >
+      Desarrollado por <span style="color: var(--color-yellow); font-weight: 700;">Ourpxi Studios</span>
+    </p>
+  </div>
+</footer>
+

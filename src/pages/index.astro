@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Stripe from '../components/decorative/Stripe.astro';
+import About from '../components/About.astro';
+import Work from '../components/Work.astro';
+import Team from '../components/Team.astro';
+import Social from '../components/Social.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Senia Animations | Señas que nos unen"
+  description="Estudio de animación 2D y rompecabezas educativo enfocado en sensibilizar sobre la vida de niños y niñas con discapacidad auditiva. ¡Señas que nos unen!"
+>
+  <Nav />
+  <main>
+    <Hero />
+    <Stripe colors={['#e74f71', '#fdc800', '#00b5e9', '#f08322', '#10ac83']} />
+    <About />
+    <Stripe colors={['#10ac83', '#00b5e9', '#fdc800', '#e74f71', '#f08322']} />
+    <Work />
+    <Stripe colors={['#f08322', '#e74f71', '#10ac83', '#fdc800', '#00b5e9']} />
+    <Team />
+    <Stripe colors={['#00b5e9', '#10ac83', '#f08322', '#e74f71', '#fdc800']} />
+    <Social />
+  </main>
+  <Footer />
+</Layout>

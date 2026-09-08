@@ -1,0 +1,38 @@
+---
+interface Props {
+  color?: string;
+  width?: number;
+  height?: number;
+  strokeWidth?: number;
+  class?: string;
+  style?: string;
+}
+
+const {
+  color = '#fdc800',
+  width = 80,
+  height = 20,
+  strokeWidth = 3.5,
+  class: className = '',
+  style = '',
+} = Astro.props;
+---
+
+<svg
+  width={width}
+  height={height}
+  viewBox="0 0 80 20"
+  fill="none"
+  class={className}
+  style={style}
+  aria-hidden="true"
+>
+  <path
+    d="M0 10 Q10 0 20 10 Q30 20 40 10 Q50 0 60 10 Q70 20 80 10"
+    stroke={color}
+    stroke-width={strokeWidth}
+    stroke-linecap="round"
+    fill="none"
+  />
+</svg>
+
