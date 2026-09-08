@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "senia-web",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "npm run build && wrangler pages deploy dist"
   },
   "dependencies": {
     "astro": "^7.3.1"
