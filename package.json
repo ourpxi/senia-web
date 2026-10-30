@@ -13,7 +13,7 @@
     "deploy": "npm run build && wrangler pages deploy dist"
   },
   "dependencies": {
-    "astro": "^7.3.1"
+    "astro": "^7.3.3"
   },
   "allowScripts": {
     "esbuild": true
